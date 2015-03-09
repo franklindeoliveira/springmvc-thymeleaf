@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<th th:include="fragments/head" />
+	</head>
+	<body>
+		<th th:include="fragments/header">Cabeçalho da página</th>
+		<th th:include="'fragments/pages/' + ${content}">Conteúdo da página.</th>
+		<th th:include="fragments/footer">Rodapé da página.</th>
+	</body>
+</html>
