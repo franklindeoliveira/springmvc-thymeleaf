@@ -51,7 +51,7 @@
 	         </bean>
 	     </mvc:interceptors>
 		 Neste exemplo, bastaria fazer uma requisição para  \?lang=pt_BR por exemplo.
-		-->
+	-->
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="/WEB-INF/mensagens/messages" />
 	</bean>

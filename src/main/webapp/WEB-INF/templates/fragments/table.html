@@ -1,8 +1,14 @@
-<table th:fragment="table (lines)">
-	<!-- <tr th:each="item : ${header}">
-		<td th:text="${item}">Item header</td>
-	</tr> -->
+<th th:fragment="table (headers, lines)">
+<table>
+	<tr>
+		<td th:each="header : ${headers}">
+			<th th:text="*{header}">Header</th>
+		</td>
+	</tr>
 	<tr th:each="line : ${lines}">
-		<td th:text="${line}">Item line</td>
+		<td th:text="*{line.nome}">Celula</td>
+		<td th:text="*{line.descricao}">Celula</td>
+		<td th:text="*{line.valor}">Celula</td>
 	</tr>
 </table>
+</th>

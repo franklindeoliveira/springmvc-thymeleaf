@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p>Variáveis: <th th:text="${atributo}">variaveis</th></p>
+		<p>Mensagens: <th th:text="#{mensagem}">mensagens</th></p>
+		<p>Link: <a th:href="@{http://www.thymeleaf.org}">Link</a></p>
+		<p>Iterando numa lista: </p>
+		<ul>
+			<li th:each="item : ${itens}">
+				<th th:text="*{item.nome}" />
+				<th th:text="*{item.descricao}" />
+				<th th:text="*{item.valor}" />
+			</li>
+		</ul>
+	</body>
+</html>
