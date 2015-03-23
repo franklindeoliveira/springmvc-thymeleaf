@@ -1,14 +1,12 @@
-<th th:fragment="table (headers, lines)">
-<table>
+<table th:fragment="table (headers, lines)">
 	<tr>
 		<td th:each="header : ${headers}">
-			<th th:text="*{header}">Header</th>
+			<span th:text="*{header}">Cabeçalho</span>
 		</td>
 	</tr>
 	<tr th:each="line : ${lines}">
-		<td th:text="*{line.nome}">Celula</td>
-		<td th:text="*{line.descricao}">Celula</td>
-		<td th:text="*{line.valor}">Celula</td>
+		<td><span th:text="*{line.nome}">Nome</span></td>
+		<td><span th:text="*{line.descricao}">Descrição</span></td>
+		<td><span th:text="*{line.valor}">Valor</span></td>
 	</tr>
 </table>
-</th>

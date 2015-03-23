@@ -4,9 +4,9 @@
 		<th th:include="fragments/head" />
 	</head>
 	<body>
-		<th th:include="fragments/header">Cabeçalho da página</th>
-		<th th:include="'fragments/pages/' + ${content}">Conteúdo da página.</th>
-		<th th:include="fragments/footer">Rodapé da página.</th>
+		<div th:include="fragments/header">Cabeçalho da página</div>
+		<div th:include="'fragments/pages/' + ${content}">Conteúdo da página.</div>
+		<div th:include="fragments/footer">Rodapé da página.</div>
 		<div th:replace="fragments/table :: table (${new String[]{'item1', 'item2', 'item3'}}, ${itens})">Tabela</div>
 	</body>
 </html>

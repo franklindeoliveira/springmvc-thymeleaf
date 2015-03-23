@@ -7,9 +7,9 @@
 		<p>Iterando numa lista: </p>
 		<ul>
 			<li th:each="item : ${itens}">
-				<th th:text="*{item.nome}" />
-				<th th:text="*{item.descricao}" />
-				<th th:text="*{item.valor}" />
+				<span th:text="*{item.nome}">Nome</span>
+				<span th:text="*{item.descricao}">Descrição</span>
+				<span th:text="*{item.valor}">Valor</span>
 			</li>
 		</ul>
 	</body>
