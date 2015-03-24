@@ -127,6 +127,42 @@ public class FragmentsController {
 
 ```
 
+head.html
+``` html
+<!-- Aqui adicionamos o conteúdo do cabeçalho como javascripts e estilos -->
+```
+
+header.html
+``` html
+<span>Fragmento para o cabeçalho da página.</span>
+```
+
+content1.html
+``` html
+<span>Fragmento para o conteúdo da página.</span>
+```
+
+footer.html
+``` html
+<span>Fragmento para o rodapé da página.</span>
+```
+
+table.html
+``` html
+<table th:fragment="table (headers, lines)">
+	<tr>
+		<td th:each="header : ${headers}">
+			<span th:text="*{header}">Cabeçalho</span>
+		</td>
+	</tr>
+	<tr th:each="line : ${lines}">
+		<td><span th:text="*{line.nome}">Nome</span></td>
+		<td><span th:text="*{line.descricao}">Descrição</span></td>
+		<td><span th:text="*{line.valor}">Valor</span></td>
+	</tr>
+</table>
+```
+
 fragments.html
 ``` html
 <!DOCTYPE html>
